@@ -51,16 +51,12 @@
             </div>
         </div>
         
-        <!-- PrimeVue DataTable to Display Submitted Data -->
+        <!--put the code of prime datatable after button-->
         <div class="row mt-5" v-if="submittedCards.length">
             <DataTable :value="submittedCards">
                 <Column field="username" header="Username"></Column>
                 <Column field="password" header="Password"></Column>
-                <Column field="isAustralian" header="Australian Resident">
-                    <template #body="slotProps">
-                        {{ slotProps.data.isAustralian ? 'Yes' : 'No' }}
-                    </template>
-                </Column>
+                <Column field="isAustralian" header="Australian Resident"></Column>
                 <Column field="gender" header="Gender"></Column>
                 <Column field="reason" header="Reason"></Column>
             </DataTable>
