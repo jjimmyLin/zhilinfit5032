@@ -6,7 +6,7 @@ import NavigationBar from '@/components/NavigationBar.vue';
 <template>
     <div class="main-container">
       <!-- page title -->
-      <h1 class="page-title">Welcome to HOPEBRIDGE</h1>
+      <h1 class="page-title">❤️ Welcome to HOPEBRIDGE ❤️</h1>
   
       <header>
         <NavigationBar />

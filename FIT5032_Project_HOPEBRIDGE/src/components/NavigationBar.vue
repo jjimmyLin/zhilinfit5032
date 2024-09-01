@@ -23,12 +23,12 @@
             </router-link>
           </li>
           <li class="nav-item">
-            <router-link to="/about-us" class="nav-link" active-class="active">
+            <router-link to="/AboutUs" class="nav-link" active-class="active">
               About Us
             </router-link>
           </li>
           <li class="nav-item">
-            <router-link to="/my-account" class="nav-link" active-class="active">
+            <router-link to="/MyAccount" class="nav-link" active-class="active">
               My Account
             </router-link>
           </li>
