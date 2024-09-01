@@ -1,13 +1,13 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 import { createApp } from 'vue'
-import HomePageView from './views/HomePageView.vue'
 import router from './router'
 
 import PrimeVue from 'primevue/config'
 import Aura from '@primevue/themes/aura'
+import App from './app.vue'
 
-const app = createApp(HomePageView)
+const app = createApp(App)
 app.use(PrimeVue, { theme: { preset: Aura } })
 app.use(router)
 
