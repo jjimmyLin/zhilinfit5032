@@ -5,6 +5,7 @@ import LoginView from '@/views/LoginView.vue'
 import MentalHealthView from '@/views/MentalHealthView.vue'
 import MyAccountView from '@/views/MyAccountView.vue'
 import SuccessStoryView from '@/views/SuccessStoryView.vue'
+import AboutUs from '@/views/AboutUs.vue'
 const routes = [
     {
         path: '/',
@@ -13,27 +14,32 @@ const routes = [
     },
 
     {
-        path: '/',
+        path: '/Login',
         name: 'Login',
         component: LoginView
     },
 
     {
-        path: '/',
+        path: '/MentalHealth',
         name: 'MentalHealth',
-        component: MentalHealthView
-    },
-
+        component: MentalHealthView,
+        children: [
+            {
+              path: '/SuccessStory',
+              name: 'SuccessStory',
+              component: SuccessStoryView
+            },
+        ]
+    },    
     {
-        path:'/',
+        path:'/MyAccount',
         name: 'MyAccount',
         component: MyAccountView
     },
-
     {
-        path:'/',
-        name: 'SuccessStory',
-        component: SuccessStoryView
+        path:'/AboutUs',
+        name: 'AboutUs',
+        component: AboutUs
     }
 ]
 

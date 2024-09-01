@@ -1,5 +1,13 @@
+<script setup>
+
+</script>
+
 <template>
-    <h1>
-    Hello
-    </h1>
+  <div class="Mentalhealth">
+    <h1>This is Mentalhealth</h1>
+  </div>
 </template>
+
+<style scoped>
+
+</style>

@@ -7,18 +7,18 @@
               Homepage
             </router-link>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <router-link to="/financial-help" class="nav-link" active-class="active">
               Financial Help
             </router-link>
-          </li>
-          <li class="nav-item">
+          </li> -->
+          <!-- <li class="nav-item">
             <router-link to="/career-help" class="nav-link" active-class="active">
               Career Help
             </router-link>
-          </li>
+          </li> -->
           <li class="nav-item">
-            <router-link to="/mental-health" class="nav-link" active-class="active">
+            <router-link to="/MentalHealth" class="nav-link" active-class="active">
               Mental Health
             </router-link>
           </li>
