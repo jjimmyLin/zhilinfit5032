@@ -7,7 +7,7 @@
         <div v-else-if="userRole === 'user'">
             <h1>Hello user</h1>
         </div>
-        <div v-else>
+        <div v-else-if="userRole === 'loggedout'">
             <h1>Please log in😁</h1>
         </div>
 
@@ -31,18 +31,22 @@ const checkUserRole = () => {
     if (currentUser) {
         if (currentUser.uid === "XvB9Bpe2jBWSsmJwlV9wY8wCY9E2") {
             userRole.value = "admin";
+            isLoggedIn.value= true;
         }//This UID is the admin account that I created on Firebase console, feature is its password is not following register rule so the account is impossibly created by anyone else (also the unique UID)
         else if (currentUser.uid !== "XvB9Bpe2jBWSsmJwlV9wY8wCY9E2")
             userRole.value = "user";
+            isLoggedIn.value= true;
     }
     else {
         userRole.value = "loggedout";
+        isLoggedIn.value= false; //just in case
     }
 };
 
 const logout = () => {
     signOut(auth)
         .then(() => {
+            window.location.reload();//refresh page after logged out
             alert("Successfully logged out!");
             router.push("/");
         })
@@ -56,12 +60,3 @@ onMounted(() => {
 });
 </script>
 
-<style scoped>
-.my-account {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    flex-direction: column;
-}
-</style>
