@@ -1,3 +1,5 @@
+<!--This is the Success story page to display stories taht hekps unemployed users recover and motivated-->
+
 <template>
     <div class="story">
         <h2>A Story of Perseverance: John's Journey from Unemployment to Success</h2>

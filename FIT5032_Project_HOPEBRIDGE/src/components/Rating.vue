@@ -1,3 +1,7 @@
+<!--This is the rating funciton which allow users to rate success story (or anyother content later)
+on the website, bsed on three dimensions, ave score will also be stored after each submit, so all 
+users contribute to the rating. This funciton was implemented by the help of firebase as db-->
+
 <template>
     <div class="rating">
         <h3>Leave your rating! (0-5)😀</h3>
@@ -96,7 +100,7 @@ export default {
     },
     async mounted() {
         await this.fetchOverallRating();
-    }, //The mounted hook fetch and loads the data and ensures codes in templates have the ave data to display
+    }, //The mounted loads the data and ensures codes in templates have the ave data to display
 };
 </script>
 
