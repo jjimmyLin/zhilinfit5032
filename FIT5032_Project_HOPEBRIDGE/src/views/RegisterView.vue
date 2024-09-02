@@ -1,27 +1,28 @@
 <script setup>
 import { ref } from "vue";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import { useRouter } from "vue-router";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth"; //required firebase auth functions inorder to register an account
+import { useRouter } from "vue-router"; //for redirect purpose after register
 const email = ref("");
 const password = ref("");
-const errors = ref({
+const error = ref({
     email: null,
     password: null
-});
+}); 
 const router = useRouter();
-
 
 const register = () => {
     validateEmail(true);
     validatePassword(true); 
     //run these two method again before register ensures valid email and password to be uploaded
 
-    if (!errors.value.email && !errors.value.password) {
+    if (!error.value.email && !error.value.password) {
+        const auth = getAuth()
         createUserWithEmailAndPassword(getAuth(), email.value, password.value)
             .then((data) => {
                 console.log("Register Successful!")
+                console.log(auth.currentUser)
                 alert("Register Successful!");
-                router.push("/");
+                router.push("/MyAccount");// Redirect to MyAccount
             })
 
             .catch((e) => {
@@ -30,7 +31,7 @@ const register = () => {
     }
 };
 
-//part of below password validate was from NOMONASH-LIBRARY project
+//part of below password validate method was from NOMONASH-LIBRARY project
 const validatePassword = (blur) => {
     const minLength = 9
     const hasUppercase = /[A-Z]/.test(password.value)
@@ -39,28 +40,28 @@ const validatePassword = (blur) => {
     const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password.value)
 
     if (password.value.length < minLength) {
-        if (blur) errors.value.password = `Password must be at least ${minLength} characters long.`
+        if (blur) error.value.password = `Password must be at least ${minLength} characters long.`
     } else if (!hasUppercase) {
-        if (blur) errors.value.password = 'Password must contain at least one uppercase letter.'
+        if (blur) error.value.password = 'Password must contain at least one uppercase letter.'
     } else if (!hasLowercase) {
-        if (blur) errors.value.password = 'Password must contain at least one lowercase letter.'
+        if (blur) error.value.password = 'Password must contain at least one lowercase letter.'
     } else if (!hasNumber) {
-        if (blur) errors.value.password = 'Password must contain at least one number.'
+        if (blur) error.value.password = 'Password must contain at least one number.'
     } else if (!hasSpecialChar) {
-        if (blur) errors.value.password = 'Password must contain at least one special character.'
+        if (blur) error.value.password = 'Password must contain at least one special character.'
     } else {
-        errors.value.password = null
+        error.value.password = null
     }
 }
 const validateEmail = (blur) => {
     if (!email.value) {
-        if (blur) errors.value.email = 'Email is required.';
+        if (blur) error.value.email = 'Email is required.';
     } else if (!email.value.includes('@')) {
-        if (blur) errors.value.email = 'Email must contain an "@" character.';
+        if (blur) error.value.email = 'Email must contain an "@" character.';
     } else if (!email.value.endsWith('.com')) {
-        if (blur) errors.value.email = 'Email must end with ".com".';
+        if (blur) error.value.email = 'Email must end with ".com".';
     } else {
-        errors.value.email = null;
+        error.value.email = null;
     }
 };
 </script>
@@ -75,14 +76,14 @@ const validateEmail = (blur) => {
             <p>
                 <input type="text" v-model="email" @blur="validateEmail(true)" placeholder="Email" />
             </p>
-            <p v-if="errors.email" style="color: red;">{{ errors.email }}</p>
+            <p v-if="error.email" style="color: red;">{{ error.email }}</p>
         </div>
 
         <div>
             <p>
                 <input type="password" v-model="password" @blur="validatePassword(true)" placeholder="Password" />
             </p>
-            <p v-if="errors.password" style="color: red;">{{ errors.password }}</p>
+            <p v-if="error.password" style="color: red;">{{ error.password }}</p>
         </div>
     </div>
 
