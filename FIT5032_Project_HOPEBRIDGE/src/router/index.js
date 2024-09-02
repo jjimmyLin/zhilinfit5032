@@ -1,3 +1,6 @@
+/*This file imports all pages required for navigation and gives their path, parent/chilren ... infos,
+then the router is exported to be used by other files*/ 
+
 import { createRouter, createWebHistory } from "vue-router";
 // although I have no idea how createwebhistory use for by just follow lab5 imported...
 import HomePageView from "@/views/HomePageView.vue";

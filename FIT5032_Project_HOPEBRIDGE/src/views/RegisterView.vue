@@ -1,3 +1,6 @@
+<!--This page allo user to register new account, validation (more than one type) enabled for both email and password
+, after successfully registered page will redirect to my account page. :)-->
+
 <script setup>
 import { ref } from "vue";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth"; //required firebase auth functions inorder to register an account
@@ -13,7 +16,7 @@ const router = useRouter();
 const register = () => {
     validateEmail(true);
     validatePassword(true); 
-    //run these two method again before register ensures valid email and password to be uploaded
+    //run these two method again before register just ensures valid email and password to be uploaded
 
     if (!error.value.email && !error.value.password) {
         const auth = getAuth()

@@ -15,6 +15,7 @@ const error = ref({
 });
 const router = useRouter();
 
+//login logic which allow user to log in by matching the info from auth firebase, and error detection
 const login = () => {
     validateEmail(true);
 
@@ -32,6 +33,7 @@ const login = () => {
     }
 };
 
+//this is the validation for email input
 const validateEmail = (blur) => {
     if (!email.value) {
         if (blur) error.value.email = 'Email is required.';

@@ -1,3 +1,5 @@
+//This file is reuqired by firebase which allows the whole app communicate with firebase
+
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 

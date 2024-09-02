@@ -1,3 +1,6 @@
+<!--This is the Navigationbar function vue, which gives clear routes to different pages. you may see some of
+them are commented since they are no need to display at this stage-->
+
 <template>
   <div class="container">
     <header class="d-flex justify-content-center py-3">

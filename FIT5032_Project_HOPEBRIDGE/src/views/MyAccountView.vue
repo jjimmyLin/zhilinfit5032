@@ -1,3 +1,8 @@
+<!--This page is for dirrerent user chekcing their own account although there are no actual function 
+yet like editing, stresstest ... and so on. basically the page identified the user if is admin (only one)
+or normal user (in my code is 'user'), then display different content accordingly. Also, the login status
+is monitored inorder to decide whether display log out button or not-->
+
 <template>
     <div class="my-account">
         <div v-if="userRole === 'admin'"> <!--by identify userrole display different content on the page-->

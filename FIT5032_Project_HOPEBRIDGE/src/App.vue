@@ -1,3 +1,6 @@
+<!--This is the main vue file runs the website, basically have the navigation bar, allow user to 
+navigate to differnt sections like log in, register or mental health-->
+
 <script setup>
 import NavigationBar from '@/components/NavigationBar.vue';
 
