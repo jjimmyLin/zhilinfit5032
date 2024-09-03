@@ -13,6 +13,7 @@ users contribute to the rating. This funciton was implemented by the help of fir
             <!--restrict input type-->
             <!-- Display average scorefor each dimensions -->
             <div class="average-score">Average: {{ averageScores[dimension.name] || 0 }}</div>
+            <!--use || 0 when there is no data in db yet, like the first time website lauched and no rating submittion, tehn ave will display '0' -->
         </div>
 
         <!-- Submit Button -->
@@ -21,6 +22,7 @@ users contribute to the rating. This funciton was implemented by the help of fir
         <!-- Display overall average rating -->
         <div class="overall-rating">
             <h4>Overall Rating (All Users): {{ (overallRating || 0).toFixed(1) }}</h4>
+            <!--same use of || as dimension ave, deciaml 1 limited-->
         </div>
     </div>
 </template>
@@ -38,13 +40,13 @@ export default {
                 { name: 'clarity', label: 'Clarity', value: 0 },
                 { name: 'emotional', label: 'Emotional Impact to You', value: 0 },
             ],
-            overallRating: null,
+            overallRating: 0, //total sum divided by dimension length
             ratingsCount: 0,
             averageScores: {
-                relevancy: null,
-                clarity: null,
-                emotional: null,
-            },
+                relevancy: 0,
+                clarity: 0,
+                emotional: 0,
+            }, //update data initial value to all zero since js dont care int or decimal
         };
     },
     methods: {
@@ -79,7 +81,7 @@ export default {
             let totalOverall = 0;
             let totalRelevancy = 0;
             let totalClarity = 0;
-            let totalEmotional = 0;
+            let totalEmotional = 0; //use let instead of var to limit the variable only work in this block {}
 
             this.ratingsCount = query.size; //total amount of sets of ratings in db
 
@@ -99,7 +101,7 @@ export default {
         },
     },
     async mounted() {
-        await this.fetchOverallRating();
+        await this.fetchOverallRating();//fetch when no submit action but result still up to date
     }, //The mounted loads the data and ensures codes in templates have the ave data to display
 };
 </script>
