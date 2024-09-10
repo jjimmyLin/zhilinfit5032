@@ -5,20 +5,24 @@
 import { ref } from "vue";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth"; //required firebase auth functions inorder to register an account
 import { useRouter } from "vue-router"; //for redirect purpose after register
+import Password from "primevue/password";
 const email = ref("");
 const password = ref("");
+const confirmpassword = ref("");
 const error = ref({
     email: null,
-    password: null
+    password: null,
+    confirmpassword: null
 }); 
 const router = useRouter();
 
 const register = () => {
     validateEmail(true);
     validatePassword(true); 
+    confirmPassword(true);
     //run these two method again before register just ensures valid email and password to be uploaded
 
-    if (!error.value.email && !error.value.password) {
+    if (email.value && password.value && !error.value.email && !error.value.password) {
         const auth = getAuth()
         createUserWithEmailAndPassword(getAuth(), email.value, password.value)
             .then((data) => {
@@ -56,6 +60,18 @@ const validatePassword = (blur) => {
         error.value.password = null
     }
 }
+const confirmPassword = (blur) => {
+    if (password.value) {
+        if (password.value !== confirmpassword.value) {
+            if(blur) {error.value.confirmpassword = "Your password doesn't match"}
+            else{
+                error.value.confirmpassword = null
+            } 
+        }
+        else error.value.confirmpassword = null
+    }
+}
+
 const validateEmail = (blur) => {
     if (!email.value) {
         if (blur) error.value.email = 'Email is required.';
@@ -88,6 +104,12 @@ const validateEmail = (blur) => {
             </p>
             <p v-if="error.password" style="color: red;">{{ error.password }}</p>
         </div>
+        <div>
+            <p>
+                <input type="password" v-model="confirmpassword" @blur="confirmPassword(true)" placeholder = "Please input your password again" class="largesize-input"/>
+            </p>
+            <p v-if="error.confirmpassword" style="color : red;">{{ error.confirmpassword }}</p>
+        </div>
     </div>
 
     <button @click="register" class="btn btn-primary">Register</button>
@@ -100,4 +122,7 @@ const validateEmail = (blur) => {
     align-items: center;
     justify-content: center;
 }
-</style>
+.largesize-input {
+    width:60%;
+}
+</style> <!--make input box larger for confirmation-->
