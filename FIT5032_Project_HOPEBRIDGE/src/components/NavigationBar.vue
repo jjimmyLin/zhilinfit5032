@@ -2,99 +2,70 @@
 them are commented since they are no need to display at this stage-->
 
 <template>
-  <div class="container">
-    <header class="d-flex justify-content-center py-3">
-      <ul class="nav nav-pills">
-        <li class="nav-item">
-          <router-link to="/" class="nav-link" active-class="active" aria-current="page">
-            Homepage
-          </router-link>
-        </li>
-        <!-- <li class="nav-item">
-            <router-link to="/financial-help" class="nav-link" active-class="active">
-              Financial Help
-            </router-link>
-          </li> -->
-        <!-- <li class="nav-item">
-            <router-link to="/career-help" class="nav-link" active-class="active">
-              Career Help
-            </router-link>
-          </li> -->
-        <li class="nav-item">
-          <router-link to="/MentalHealth" class="nav-link" active-class="active">
-            Mental Health
-          </router-link>
-        </li>
-        <li class="nav-item">
-          <router-link to="/AboutUs" class="nav-link" active-class="active">
-            About Us
-          </router-link>
-        </li>
-        <li class="nav-item">
-          <router-link to="/MyAccount" class="nav-link" active-class="active">
-            My Account
-          </router-link>
-        </li>
-        <li class="nav-item">
-          <router-link to="/Login" class="nav-link" active-class="active">
-            Log in
-          </router-link>
-        </li>
-        <li class="nav-item">
-          <router-link to="/Register" class="nav-link" active-class="active">
-            Register
-          </router-link>
-        </li>
-        <li class="nav-item">
-          <router-link to="/GetBookCount" class="nav-link" active-class="active">
-            GetBook count
-          </router-link>
-        </li>
-        <li class="nav-item">
-          <router-link to="/WeatherCheck" class="nav-link" active-class="active">
-            GetWeather
-          </router-link>
-        </li>
-      </ul>
-    </header>
+  <div class="container-fluid">
+    <ul class="nav nav-underline justify-content-center">
+      <li class="nav-item">
+        <router-link to="/" class="nav-link" active-class="active" aria-current="page">
+          Homepage
+        </router-link>
+      </li>
+      <!-- Uncomment other links as needed -->
+      <li class="nav-item">
+        <router-link to="/MentalHealth" class="nav-link" active-class="active">
+          Mental Health
+        </router-link>
+      </li>
+      <li class="nav-item">
+        <router-link to="/AboutUs" class="nav-link" active-class="active">
+          About Us
+        </router-link>
+      </li>
+      <li class="nav-item">
+        <router-link to="/MyAccount" class="nav-link" active-class="active">
+          My Account
+        </router-link>
+      </li>
+      <li class="nav-item">
+        <router-link to="/Login" class="nav-link" active-class="active">
+          Log in
+        </router-link>
+      </li>
+      <li class="nav-item">
+        <router-link to="/Register" class="nav-link" active-class="active">
+          Register
+        </router-link>
+      </li>
+      <li class="nav-item">
+        <router-link to="/GetBookCount" class="nav-link" active-class="active">
+          GetBook count
+        </router-link>
+      </li>
+      <li class="nav-item">
+        <router-link to="/WeatherCheck" class="nav-link" active-class="active">
+          GetWeather
+        </router-link>
+      </li>
+    </ul>
   </div>
 </template>
 
-<!-- below was from lab5 studio -->
+
 <style scoped>
-.b-example-divider {
-  height: 3rem;
-  background-color: rgba(0, 0, 0, 0.1);
-  border: solid rgba(0, 0, 0, 0.15);
-  border-width: 1px 0;
-  box-shadow:
-    inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
-    inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+.nav-underline .nav-item {
+  margin-right: 25px; /* 每个导航项之间增加一定的间距 */
 }
 
-.form-control-dark {
-  color: #fff;
-  background-color: var(--bs-dark);
-  border-color: var(--bs-gray);
+.nav-underline .nav-link {
+  padding: 8px 15px; /* 增加链接的内边距，使其更宽松 */
+  font-weight: 400; /* 适当增加字体粗细，提升可读性 */
+  font-family: Arial, sans-serif;
+  font-size:large;
+  color: black;
 }
 
-.form-control-dark:focus {
-  color: #fff;
-  background-color: var(--bs-dark);
-  border-color: #fff;
-  box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25);
-}
-
-.bi {
-  vertical-align: -0.125em;
-  fill: currentColor;
-}
-
-.text-small {
-  font-size: 85%;
-}
-
-.dropdown-toggle {
-  outline: 0;
+.nav-underline .nav-link.active {
+  font-weight: bold;
+  background-color: #f2f6f7ef; /* 为激活项增加背景色 */
+  border-radius: 5px; /* 增加一点圆角，看起来更柔和 */
 }
 </style>
