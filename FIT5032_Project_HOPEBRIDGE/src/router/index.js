@@ -10,6 +10,11 @@ import MyAccountView from "@/views/MyAccountView.vue";
 import SuccessStoryView from "@/views/SuccessStoryView.vue";
 import AboutUs from "@/views/AboutUs.vue";
 import RegisterView from "@/views/RegisterView.vue";
+import GetBookCountView from "@/views/GetBookCountView.vue";
+import weatherview from "@/views/weatherview.vue";
+import { compile } from "vue";
+import Weatherview from "@/views/weatherview.vue";
+
 const routes = [
   {
     path: "/",
@@ -55,6 +60,16 @@ const routes = [
     name: "Register",
     component: RegisterView,
   },
+  {
+    path: "/GetBookCount" ,
+    name: "GetBookCount" ,
+      component: GetBookCountView
+  },
+  {
+    path: "/WeatherCheck",
+    name: "WeatherCheck",
+    component: Weatherview
+  }
 ];
 
 const router = createRouter({

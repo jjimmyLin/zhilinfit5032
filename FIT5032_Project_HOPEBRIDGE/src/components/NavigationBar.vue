@@ -45,6 +45,16 @@ them are commented since they are no need to display at this stage-->
             Register
           </router-link>
         </li>
+        <li class="nav-item">
+          <router-link to="/GetBookCount" class="nav-link" active-class="active">
+            GetBook count
+          </router-link>
+        </li>
+        <li class="nav-item">
+          <router-link to="/WeatherCheck" class="nav-link" active-class="active">
+            GetWeather
+          </router-link>
+        </li>
       </ul>
     </header>
   </div>
