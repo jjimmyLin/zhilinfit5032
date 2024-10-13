@@ -9,7 +9,6 @@ import NavigationBar from '@/components/NavigationBar.vue';
 <template>
     <h1 class="page-title text-center">💖 Welcome to HOPEBRIDGE 💖</h1>
 
-
     <div class="main-container">
         
       <header>
