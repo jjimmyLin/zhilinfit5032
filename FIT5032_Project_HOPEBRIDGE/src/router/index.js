@@ -11,6 +11,7 @@ import SuccessStoryView from "@/views/SuccessStoryView.vue";
 import AboutUs from "@/views/AboutUs.vue";
 import RegisterView from "@/views/RegisterView.vue";
 import StresstestView from "@/views/StresstestView.vue";
+import JobView from "@/views/JobView.vue";
 
 const routes = [
   {
@@ -62,6 +63,12 @@ const routes = [
     path: "/Stresstest",
     name: "Stresstest",
     component: StresstestView,
+  },
+
+  {
+    path: "/Job",
+    name: "Job",
+    component: JobView,
   }
 ];
 

@@ -40,6 +40,11 @@ them are commented since they are no need to display at this stage-->
           Stresstest
         </router-link>
       </li>
+      <li class="nav-item">
+        <router-link to="/Job" class="nav-link" active-class="active">
+          Career Opportunities
+        </router-link>
+      </li>
     </ul>
   </div>
 </template>
