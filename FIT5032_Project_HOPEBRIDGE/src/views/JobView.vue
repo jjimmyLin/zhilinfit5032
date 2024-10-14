@@ -1,24 +1,35 @@
 <!--import map.vue to show-->
 <template>
-    <div id="layout">
-      <Map />
-    </div>
-  </template>
-  
-  <script>
-    import Map from '@/components/Map.vue';
-    import 'mapbox-gl/dist/mapbox-gl.css';
-    export default {
-      components: {
+    <Map v-model="location" />
+
+</template>
+
+<script>
+import Map from '@/components/Map.vue';
+import 'mapbox-gl/dist/mapbox-gl.css';
+export default {
+    components: {
         Map
-      }
-    };
-  </script>
-  
-  <style>
-    #layout {
-      flex: 1;
-      display: flex;
-      position: relative;
+    },
+    data() {
+        return {
+            location: {
+                lng: 144.9631,
+                lat: -37.8136,
+                bearing: 0,
+                pitch: 0,
+                zoom: 9,
+            }
+        };
     }
-  </style>
+};
+
+</script>
+
+<style>
+#layout {
+    flex: 1;
+    display: flex;
+    position: relative;
+}
+</style>
