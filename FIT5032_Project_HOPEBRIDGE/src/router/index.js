@@ -11,9 +11,9 @@ import SuccessStoryView from "@/views/SuccessStoryView.vue";
 import AboutUs from "@/views/AboutUs.vue";
 import RegisterView from "@/views/RegisterView.vue";
 import GetBookCountView from "@/views/GetBookCountView.vue";
-import weatherview from "@/views/weatherview.vue";
 import { compile } from "vue";
-import Weatherview from "@/views/weatherview.vue";
+import Weatherview from "@/views/WeatherView.vue";
+import StresstestView from "@/views/StresstestView.vue";
 
 const routes = [
   {
@@ -69,6 +69,12 @@ const routes = [
     path: "/WeatherCheck",
     name: "WeatherCheck",
     component: Weatherview
+  },
+
+  {
+    path: "/Stresstest",
+    name: "Stresstest",
+    component: StresstestView,
   }
 ];
 
