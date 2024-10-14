@@ -1,20 +1,33 @@
 <template>
-    <div class="stress-test">
-      <h2>Stress Test</h2>
-      <form @submit.prevent="submitTest">
-        <div v-for="(question, index) in questions" :key="index" class="question">
-          <label>{{ question.text }}</label>
-          <select v-model="answers[index]" required>
-            <option disabled value="">Please select...</option>
-            <option v-for="option in options" :key="option.value" :value="option.value">
-              {{ option.text }}
-            </option>
-          </select>
+    <div class="container my-4">
+      <div class="row">
+        <!-- Image column (on large and medium screens, order 1; on small screens, order 2) -->
+        <div class="col-md-6 order-md-1 order-2">
+          <img src="@/assets/picture/6.png" alt="Image" class="img-fluid" />
         </div>
-        <button type="submit">Submit Test</button>
-      </form>
-      <div v-if="result !== null">
-        <h3>Test Result: {{ resultText }}</h3>
+  
+        <!-- Text/Table content column (on large and medium screens, order 2; on small screens, order 1) -->
+        <div class="col-md-6 order-md-2 order-1">
+          <div class="content">
+            <h2 class="text-center">Stress Test</h2>
+            <form @submit.prevent="submitTest" class="needs-validation" novalidate>
+              <div v-for="(question, index) in questions" :key="index" class="mb-3">
+                <label class="form-label">{{ question.text }}</label>
+                <select v-model="answers[index]" class="form-select" required>
+                  <option disabled value="">Please select...</option>
+                  <option v-for="option in options" :key="option.value" :value="option.value">
+                    {{ option.text }}
+                  </option>
+                </select>
+                <div class="invalid-feedback">Please select an option.</div>
+              </div>
+              <button type="submit" class="btn btn-primary btn-lg w-100 mt-4">Submit Test</button>
+            </form>
+            <div v-if="result !== null" class="alert alert-info mt-4">
+              <h3 class="text-center">Test Result: {{ resultText }}</h3>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </template>
@@ -77,22 +90,20 @@
   </script>
   
   <style scoped>
-  .stress-test {
-    max-width: 600px;
-    margin: 0 auto;
+  /* For better image responsiveness */
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
   }
-  .question {
-    margin-bottom: 20px;
+  
+  .container {
+    background-color: #1a2b48; /* Adjust as needed */
+    padding: 20px;
+    border-radius: 8px;
   }
-  button {
-    background-color: #4CAF50;
+  
+  .content {
     color: white;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-  }
-  button:hover {
-    background-color: #45a049;
   }
   </style>
   

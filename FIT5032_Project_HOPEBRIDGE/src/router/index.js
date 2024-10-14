@@ -11,7 +11,6 @@ import SuccessStoryView from "@/views/SuccessStoryView.vue";
 import AboutUs from "@/views/AboutUs.vue";
 import RegisterView from "@/views/RegisterView.vue";
 import GetBookCountView from "@/views/GetBookCountView.vue";
-import { compile } from "vue";
 import Weatherview from "@/views/WeatherView.vue";
 import StresstestView from "@/views/StresstestView.vue";
 
@@ -34,7 +33,7 @@ const routes = [
     component: MentalHealthView,
     children: [
       {
-        path: "/SuccessStory",
+        path: "SuccessStory",
         name: "SuccessStory",
         component: SuccessStoryView,
       }, //not in use at this stage just leave it...

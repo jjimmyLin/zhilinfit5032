@@ -45,6 +45,11 @@ them are commented since they are no need to display at this stage-->
           GetWeather
         </router-link>
       </li>
+      <li class="nav-item">
+        <router-link to="/Stresstest" class="nav-link" active-class="active">
+          Stresstest
+        </router-link>
+      </li>
     </ul>
   </div>
 </template>
