@@ -36,11 +36,6 @@ them are commented since they are no need to display at this stage-->
         </router-link>
       </li>
       <li class="nav-item">
-        <router-link to="/WeatherCheck" class="nav-link" active-class="active">
-          GetWeather
-        </router-link>
-      </li>
-      <li class="nav-item">
         <router-link to="/Stresstest" class="nav-link" active-class="active">
           Stresstest
         </router-link>

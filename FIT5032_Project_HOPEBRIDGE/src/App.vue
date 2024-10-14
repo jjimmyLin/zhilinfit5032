@@ -2,6 +2,7 @@
 navigate to differnt sections like log in, register or mental health-->
 
 <script setup>
+import WeatherWidget from '@/components/WeatherWidget.vue';
 import NavigationBar from '@/components/NavigationBar.vue';
 
 </script>
@@ -13,6 +14,7 @@ import NavigationBar from '@/components/NavigationBar.vue';
         
       <header>
         <NavigationBar />
+        <WeatherWidget class="weather-widget" /> 
       </header>
       
       <main class="main-box">

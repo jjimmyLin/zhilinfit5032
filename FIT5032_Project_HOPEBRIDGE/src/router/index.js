@@ -10,7 +10,6 @@ import MyAccountView from "@/views/MyAccountView.vue";
 import SuccessStoryView from "@/views/SuccessStoryView.vue";
 import AboutUs from "@/views/AboutUs.vue";
 import RegisterView from "@/views/RegisterView.vue";
-import Weatherview from "@/views/WeatherView.vue";
 import StresstestView from "@/views/StresstestView.vue";
 
 const routes = [
@@ -57,11 +56,6 @@ const routes = [
     path: "/Register",
     name: "Register",
     component: RegisterView,
-  },
-  {
-    path: "/WeatherCheck",
-    name: "WeatherCheck",
-    component: Weatherview
   },
 
   {
