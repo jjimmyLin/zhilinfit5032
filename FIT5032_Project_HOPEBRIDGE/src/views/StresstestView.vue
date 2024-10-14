@@ -44,7 +44,7 @@ import { db } from "@/firebase"; // Assuming firebase.js exports the Firestore i
 export default {
     data() {
         return {
-            // Predefined stress test questions
+            // Stress test questions
             questions: [
                 { text: "Do you feel anxious about your financial situation?" },
                 { text: "Are you worried about not finding a job?" },
@@ -55,7 +55,7 @@ export default {
                 { text: "Do you experience emotional swings due to stress?" },
                 { text: "Do you feel you need help with your mental health?" },
             ],
-            // Options for each question, 1-5 stress levels
+            // Options for each question, indictaes 1-5 stress levels
             options: [
                 { value: 1, text: "Never - 1" },
                 { value: 2, text: "Rarely - 2" },

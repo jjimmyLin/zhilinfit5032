@@ -60,11 +60,6 @@ const routes = [
     component: RegisterView,
   },
   {
-    path: "/GetBookCount" ,
-    name: "GetBookCount" ,
-      component: GetBookCountView
-  },
-  {
     path: "/WeatherCheck",
     name: "WeatherCheck",
     component: Weatherview
