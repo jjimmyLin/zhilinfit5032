@@ -2,6 +2,9 @@
 
 <template>
     <div class="story">
+        <div class="title text-center text-decoration-underline">
+            <h1>Story of the week</h1>
+        </div>
         <h2>A Story of Perseverance: John's Journey from Unemployment to Success</h2>
         <p>
             John, a 35-year-old marketing professional, found himself in a difficult situation when his company
@@ -45,6 +48,10 @@ export default
 </script>
 
 <style scoped>
+.title {
+    text-align: center;
+    color: #e633aa;
+}
 .story {
     max-width: 750px;
     margin: 0 auto;
@@ -58,7 +65,7 @@ export default
 
 h2 {
     text-align: center;
-    color: #e772c0;
+    color: #ed96d0;
 }
 
 p {

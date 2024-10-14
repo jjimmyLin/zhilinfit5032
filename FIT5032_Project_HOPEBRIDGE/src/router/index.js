@@ -10,7 +10,6 @@ import MyAccountView from "@/views/MyAccountView.vue";
 import SuccessStoryView from "@/views/SuccessStoryView.vue";
 import AboutUs from "@/views/AboutUs.vue";
 import RegisterView from "@/views/RegisterView.vue";
-import GetBookCountView from "@/views/GetBookCountView.vue";
 import Weatherview from "@/views/WeatherView.vue";
 import StresstestView from "@/views/StresstestView.vue";
 

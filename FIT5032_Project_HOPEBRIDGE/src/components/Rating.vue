@@ -108,18 +108,20 @@ export default {
 
 <style scoped>
 .rating {
+    color:black;
     max-width: 400px;
     margin: 15px auto;
     padding: 15px;
     border: 2px solid #ddd;
     border-radius: 12px;
-    background-color: #f9f9f9;
+    background-color: #dbf4f1;
     font-family: 'Arial', sans-serif;
 }
 
 .rating-input {
     margin-bottom: 10px;
     text-align: left;
+    color:black
 }
 
 .average-score {
