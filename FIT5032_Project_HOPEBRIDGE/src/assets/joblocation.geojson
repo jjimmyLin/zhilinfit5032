@@ -1,0 +1,185 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "Title": "Street cleaner"
+        },
+        "geometry": {
+          "coordinates": [
+            144.96552170269752,
+            -37.80971943147488
+          ],
+          "type": "Point"
+        },
+        "id": 0
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "Title": "University Cleaner"
+        },
+        "geometry": {
+          "coordinates": [
+            144.96889958728497,
+            -37.810035405976286
+          ],
+          "type": "Point"
+        },
+        "id": 1
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "Title": "Woolworth butcher worker"
+        },
+        "geometry": {
+          "coordinates": [
+            144.9653821852005,
+            -37.81117457732645
+          ],
+          "type": "Point"
+        },
+        "id": 2
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "Title": "Train station security"
+        },
+        "geometry": {
+          "coordinates": [
+            144.95603825039223,
+            -37.811883226736455
+          ],
+          "type": "Point"
+        },
+        "id": 3
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "Title": "Stadium security"
+        },
+        "geometry": {
+          "coordinates": [
+            144.94764163443273,
+            -37.81657259135985
+          ],
+          "type": "Point"
+        },
+        "id": 4
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "Title": "NGV counter admin"
+        },
+        "geometry": {
+          "coordinates": [
+            144.9686693242665,
+            -37.82279555353378
+          ],
+          "type": "Point"
+        },
+        "id": 5
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "Title": "Uni security"
+        },
+        "geometry": {
+          "coordinates": [
+            145.13581837675224,
+            -37.91095667743446
+          ],
+          "type": "Point"
+        },
+        "id": 6
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "Title": "Airport Maccas worker"
+        },
+        "geometry": {
+          "coordinates": [
+            144.84708663030972,
+            -37.67390780456806
+          ],
+          "type": "Point"
+        },
+        "id": 7
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "Title": "Hotel counter admin"
+        },
+        "geometry": {
+          "coordinates": [
+            144.8032683477125,
+            -37.772731222099
+          ],
+          "type": "Point"
+        },
+        "id": 8
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "Title": "restaurant worker"
+        },
+        "geometry": {
+          "coordinates": [
+            145.1664259612183,
+            -37.8550411575647
+          ],
+          "type": "Point"
+        },
+        "id": 9
+      },
+      {
+        "type": "Feature",
+        "properties": {},
+        "geometry": {
+          "coordinates": [
+            145.1333794738074,
+            -37.83757316203127
+          ],
+          "type": "Point"
+        },
+        "id": 10
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "Title": "Supermarket worker"
+        },
+        "geometry": {
+          "coordinates": [
+            145.13433865000235,
+            -37.85288342062575
+          ],
+          "type": "Point"
+        },
+        "id": 11
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "Title": "University security"
+        },
+        "geometry": {
+          "coordinates": [
+            145.1120952334893,
+            -37.845101584789234
+          ],
+          "type": "Point"
+        },
+        "id": 12
+      }
+    ]
+  }

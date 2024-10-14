@@ -18,7 +18,7 @@ export default {
         // Initialize the map
         const map = new mapboxgl.Map({
             container: this.$refs.mapContainer,
-            style: "mapbox://styles/mapbox/streets-v12", // Replace with your preferred map style
+            style: "mapbox://styles/jimlin1213/cm28u622400lg01omalppduft", // Replace with your preferred map style
             center: [lng, lat],
             bearing,
             pitch,
@@ -41,7 +41,18 @@ export default {
         }
 
     },
+    watch: {
+        modelValue(next) {
+            const curr = this.getLocation()
+            const map = this.map
 
+            if (curr.lng != next.lng || curr.lat != next.lat)
+                map.setCenter({ lng: next.lng, lat: next.lat })
+            if (curr.pitch != next.pitch) map.setPitch(next.pitch)
+            if (curr.bearing != next.bearing) map.setBearing(next.bearing)
+            if (curr.zoom != next.zoom) map.setZoom(next.zoom)
+        }
+    },
     methods: {
         getLocation() {
             return {

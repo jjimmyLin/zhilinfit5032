@@ -49,10 +49,12 @@ import NavigationBar from '@/components/NavigationBar.vue';
 }
 
 main {
-  background-color: #1b2a47; /* 板块背景色，和导航栏下划线颜色相融合 */
-  color: white; /* 白色文字使得可读性更高 */
+  background-color: #1b2a47;
+  color: white;
   padding: 20px;
-  min-height: 300px; /* 设置一个最小高度 */
+  min-height: 300px;
+  width:auto;
+  height: 110vh;
 }
 
 </style>
