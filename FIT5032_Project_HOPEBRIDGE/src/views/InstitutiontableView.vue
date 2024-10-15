@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>AU State's Subsidy Information</h1>
+        <h1>Australia Mental health Institute Information</h1>
         <!-- page Controls -->
          <div class="search-bar col-md-2">
             <input type="text" v-model="searchInput" class="form-control" placeholder="Search"/>
@@ -73,7 +73,7 @@ export default {
         //here is getData function
         async getData() {
             try {
-                const response = await fetch('/table/MOCK_DATA 5032.csv');
+                const response = await fetch('public/table/Mockdatamental.csv');
                 const csvText = await response.text();
                 this.convertCSV(csvText);
             } catch (error) {
@@ -90,7 +90,7 @@ export default {
 
         sortTable(columnIndex) {
 
-            if (columnIndex !== 5) {
+            if (columnIndex !== 0) {
                 return;
             } //limited sorting fucntion only to amount of subsidy
 

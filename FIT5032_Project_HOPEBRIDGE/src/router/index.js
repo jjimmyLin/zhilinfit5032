@@ -12,6 +12,7 @@ import Financialhelp from "@/views/Financialhelp.vue";
 import RegisterView from "@/views/RegisterView.vue";
 import StresstestView from "@/views/StresstestView.vue";
 import JobView from "@/views/JobView.vue";
+import InstituteList from "@/views/InstituteList.vue";
 
 const routes = [
   {
@@ -69,6 +70,11 @@ const routes = [
     path: "/Job",
     name: "Job",
     component: JobView,
+  },
+  {
+    path: "/InstituteList",
+    name: "InstituteList",
+    component: InstituteList,
   }
 ];
 

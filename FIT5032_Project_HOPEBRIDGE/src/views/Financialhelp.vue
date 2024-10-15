@@ -1,10 +1,9 @@
-
 <script>
-    import FinhelptableView from './FinhelptableView.vue';
-    export default {
-  components: {
-    FinhelptableView
-  }
+import FinhelptableView from './FinhelptableView.vue';
+export default {
+    components: {
+        FinhelptableView
+    }
 }
 </script>
 
