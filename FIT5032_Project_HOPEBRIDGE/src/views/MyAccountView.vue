@@ -26,7 +26,8 @@ is monitored inorder to decide whether display log out button or not-->
         </div>
 
         <div v-else-if="userRole === 'loggedout'">
-            <h1>Please log in 😁</h1>
+            <h1>Please Log in😁</h1>
+            <router-link to="/Login" class="btn btn-primary btn-sm">Log in</router-link>
         </div>
     </div>
 </template>
@@ -39,10 +40,10 @@ import { collection, query, where, getDocs } from "firebase/firestore";
 import { db } from "@/firebase"; // Ensure firebase.js is correctly set up
 import Chart from 'primevue/chart';
 
-const userRole = ref("user");
-const auth = getAuth();
-const isLoggedIn = ref(false);
-const stressTests = ref([]);
+const userRole = ref("user"); //role
+const auth = getAuth(); //get authinfo
+const isLoggedIn = ref(false); //boolean to check login status
+const stressTests = ref([]); //a const set for performing chart
 const email = ref(""); //to display email address
 
 const chartData = ref(null);
@@ -55,9 +56,9 @@ const chartOptions = ref({
             position: 'top',
             labels: { //the wording below title
                 color: 'white',
-            font: {
-                size: 20
-            }
+                font: {
+                    size: 20
+                }
             },
         },
         title: { //chart table title
@@ -123,25 +124,34 @@ const fetchStressTests = async () => {
         email.value = currentUser.email;
         try {
             const q = query(
-                collection(db, "stressTests"),
-                where("uid", "==", currentUser.uid)
+                collection(db, "stressTests"), //stands for the collection stored as name "stressTests" on firebase
+                where("uid", "==", currentUser.uid) //match with user uid
             );
-            const querySnapshot = await getDocs(q);
-            const tests = [];
+            const queryget = await getDocs(q);
+            //get data from existing collections
+            const localdataset = [];//store locally after retrive
 
-            querySnapshot.forEach((doc) => {
+            queryget.forEach((doc) => {
                 const data = doc.data();
-                tests.push({
+                localdataset.push({
                     date: new Date(data.timestamp.seconds * 1000).toLocaleDateString(),
                     result: data.result,
-                });
-            });
+                });// added retrived data to local set
+            }); //run a for loop to get all the datas
 
-            stressTests.value = tests;
+            stressTests.value = localdataset;
+            //assign retrived data to stressTest const
 
             // Prepare data for chart
             chartData.value = {
-                labels: stressTests.value.map(test => test.date),
+                labels: stressTests.value
+                .sort((a, b) => new Date(a.date) - new Date(b.date)) 
+                //touse (a, b) are two sets which includes date and result for each
+                //sort() des or asc based on reulst neg or pos, hence minus a by b
+                //if a date is later than b, then reuslt for sort() will be positive
+                //sort() runs for whole set, which is stressTest.value here
+                //this line sorts the date
+                .map(test => test.date),
                 datasets: [
                     {
                         label: 'Stress Level',
@@ -154,7 +164,7 @@ const fetchStressTests = async () => {
             };
         } catch (e) {
             console.error("Error fetching stress test data: ", e);
-        }
+        } //error catch
     }
 };
 

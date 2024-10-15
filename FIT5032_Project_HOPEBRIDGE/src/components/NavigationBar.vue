@@ -16,24 +16,18 @@ them are commented since they are no need to display at this stage-->
         </router-link>
       </li>
       <li class="nav-item">
-        <router-link to="/AboutUs" class="nav-link" active-class="active">
-          About Us
+        <router-link to="/Job" class="nav-link" active-class="active">
+          Career Opportunities
+        </router-link>
+      </li>
+      <li class="nav-item">
+        <router-link to="/Financialhelp" class="nav-link" active-class="active">
+          Financial Help
         </router-link>
       </li>
       <li class="nav-item">
         <router-link to="/MyAccount" class="nav-link" active-class="active">
           My Account
-        </router-link>
-      </li>
-      <li class="nav-item">
-        <router-link to="/Login" class="nav-link" active-class="active">
-          Log in
-        </router-link>
-      </li>
-    
-      <li class="nav-item">
-        <router-link to="/Job" class="nav-link" active-class="active">
-          Career Opportunities
         </router-link>
       </li>
     </ul>

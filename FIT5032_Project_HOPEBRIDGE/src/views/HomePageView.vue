@@ -27,8 +27,8 @@
         </ul>
         <h3 class="font-weight-bold mt-4">Are you ready to check your stress levels?</h3>
         <p class="mb-4">
-          Take our <strong>Stress Test</strong> to assess your current mental well-being and receive personalized tips
-          on how to manage it. Start your journey toward a more balanced life.
+          Take our <strong>Stress Test</strong> to assess your current mental well-being and Start your journey toward a
+          more balanced life.
         </p>
         <router-link to="/Stresstest" class="btn btn-primary btn-lg mb-3">Take the Stress Test</router-link>
         <br />
@@ -56,7 +56,7 @@ img {
 }
 
 .Resource {
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 h1 {
@@ -91,8 +91,8 @@ h3 {
 .btn-outline-secondary {
   font-size: 0.875rem;
   margin-top: 10px;
-  color:#ffffff;
+  color: #ffffff;
   border-width: 2px;
-  border-color:aliceblue
+  border-color: aliceblue
 }
 </style>

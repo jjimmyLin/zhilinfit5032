@@ -8,7 +8,7 @@ import LoginView from "@/views/LoginView.vue";
 import MentalHealthView from "@/views/MentalHealthView.vue";
 import MyAccountView from "@/views/MyAccountView.vue";
 import SuccessStoryView from "@/views/SuccessStoryView.vue";
-import AboutUs from "@/views/AboutUs.vue";
+import Financialhelp from "@/views/Financialhelp.vue";
 import RegisterView from "@/views/RegisterView.vue";
 import StresstestView from "@/views/StresstestView.vue";
 import JobView from "@/views/JobView.vue";
@@ -44,9 +44,9 @@ const routes = [
     component: MyAccountView,
   },
   {
-    path: "/AboutUs",
-    name: "AboutUs",
-    component: AboutUs,
+    path: "/Financialhelp",
+    name: "Financialhelp",
+    component: Financialhelp,
   },
   {
     path: "/Login",
