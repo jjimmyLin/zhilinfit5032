@@ -1,8 +1,15 @@
-<!--This is a introduction page, simply display a paragraph of introducing the goals and 
-values of the org&website-->
+
+<script>
+    import FinhelptableView from './FinhelptableView.vue';
+    export default {
+  components: {
+    FinhelptableView
+  }
+}
+</script>
 
 <template>
-    <div class="introduction">
-
+    <div class="Table">
+        <FinhelptableView />
     </div>
 </template>

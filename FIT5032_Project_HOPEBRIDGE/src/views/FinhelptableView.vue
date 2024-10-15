@@ -20,32 +20,28 @@
 export default {
     data() {
         return {
-            headers: [], // 保存表格的列名
-            rows: [] // 保存表格的数据行
+            headers: [], 
+            rows: []
         };
     },
     mounted() {
-        this.loadCSVData(); // 组件加载时调用
+        this.getData();
     },
     methods: {
-        async loadCSVData() {
+        async getData() {
             try {
-                // 使用 fetch 从 assets 目录获取 CSV 文件
-                const response = await fetch(require('@/assets/table/MOCK_DATA 5032.csv'));
-                const csvText = await response.text(); // 获取文本内容
-                this.parseCSVData(csvText); // 解析 CSV
+                const response = await fetch('/table/MOCK_DATA 5032.csv');
+                const csvText = await response.text();
+                this.parseCSVData(csvText);
             } catch (error) {
                 console.error('Error loading CSV file:', error);
             }
         },
         parseCSVData(csvText) {
-            // 按行分割 CSV 文本
             const lines = csvText.split('\n');
-            // 第一行是表头
             this.headers = lines[0].split(',');
-            // 其余行是表格数据
             this.rows = lines.slice(1).map(line => line.split(','));
-        }
+        } //split datas from csv and assign to data attrs above (headers and rows)
     }
 };
 </script>
