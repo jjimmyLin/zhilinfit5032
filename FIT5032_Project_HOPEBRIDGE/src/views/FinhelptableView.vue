@@ -4,16 +4,24 @@
         <!-- page Controls -->
         <div class="page-controls">
             <button class="btn btn-primary" @click="prevPage" :disabled="currentPage === 1">Previous</button>
-            <button class="btn btn-primary" @click="nextPage" :disabled="currentPage === totalPages">Next</button>
+            <button class="btn btn-primary" @click="nextPage" :disabled="currentPage === 20">Next</button>
+            <!--shouldnt be hardcoded 20 but no idea how to change-->
         </div>
         <table class="table">
             <thead> <!--abbr table head-->
                 <tr> <!--first row is header names-->
-                    <th v-for="(header, index) in columns" :key="index">{{ header }}</th>
+                    <th v-for="(header, index) in columns" :key="index" @click="sortTable(index)"
+                        style="cursor:pointer;"><!--use sorttable func-->
+                        {{ header }}
+                        <span v-if="sortColumn === index">
+                            <!--another block within the line, display after column name-->
+                            {{ sortOrder === 'asc' ? '↑' : '↓' }}
+                        </span>
+                    </th>
                 </tr><!--for loop to get every column name in table; th changes style to differ header and contents-->
             </thead>
             <tbody><!--abbr table body-->
-                <tr v-for="(row, rowIndex) in paginatedRows" :key="rowIndex"> <!-- 修改为 paginatedRows -->
+                <tr v-for="(row, rowIndex) in changePage" :key="rowIndex">
                     <td v-for="(cell, cellIndex) in row" :key="cellIndex">{{ cell }}</td>
                 </tr>
             </tbody>
@@ -28,7 +36,8 @@ export default {
             columns: [],
             rows: [],
             currentPage: 1, //stores page num
-            pageSize: 10//limited content shown on page
+            pageSize: 10,//limited content shown on page
+            sortOrder: 'asc',
         };
     },
     mounted() {
@@ -41,7 +50,7 @@ export default {
         totalPages() {
             return Math.ceil(this.rows.length / this.pageSize);
         },
-        paginatedRows() {
+        changePage() {
             const start = (this.currentPage - 1) * this.pageSize;
             const end = start + this.pageSize;
             return this.rows.slice(start, end);
@@ -66,6 +75,39 @@ export default {
             this.columns = lines[0].split(',');
             this.rows = lines.slice(1).map(line => line.split(','));
         }, //split datas from csv and assign to data attrs above (headers and rows)
+
+        sortTable(columnIndex) {
+
+            if (columnIndex !== 5) {
+                return;
+            } //limited sorting fucntion only to amount of subsidy
+
+            if (this.sortColumn === columnIndex) {
+                // If already sorting by this column, reverse the order
+                this.sortOrder = this.sortOrder === 'asc' ? 'desc' : 'asc';
+            } else {
+                // Otherwise, start sorting by this column in ascending order
+                this.sortOrder = 'asc';
+                this.sortColumn = columnIndex;
+            }
+
+            this.rows.sort((a, b) => {
+                const valA = a[columnIndex];
+                const valB = b[columnIndex];
+
+                // Handle numeric sorting
+                if (!isNaN(valA) && !isNaN(valB)) {
+                    return this.sortOrder === 'asc'
+                        ? valA - valB
+                        : valB - valA;
+                }
+
+                // Handle string sorting
+                return this.sortOrder === 'asc'
+                    ? valA.localeCompare(valB)
+                    : valB.localeCompare(valA);
+            });
+        },
 
         prevPage() {
             if (this.currentPage > 1) {
@@ -113,5 +155,9 @@ button {
 
 button:disabled {
     cursor: not-allowed;
+}
+
+th:hover {
+    background-color: #e2e6ea;
 }
 </style>
