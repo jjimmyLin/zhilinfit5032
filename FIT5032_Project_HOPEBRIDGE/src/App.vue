@@ -8,44 +8,42 @@ import NavigationBar from '@/components/NavigationBar.vue';
 </script>
 
 <template>
-    <h1 class="page-title text-center">💖 Welcome to HOPEBRIDGE 💖</h1>
+  <h1 class="page-title text-center">💖 Welcome to HOPEBRIDGE 💖</h1>
 
-    <div class="main-container">
-        
-      <header>
-        <NavigationBar />
-        <WeatherWidget class="weather-widget" /> 
-      </header>
-      
-      <main class="main-box">
-        <div class="sub-container">
-          
-        </div>
-        <router-view></router-view>
-      </main>
-    </div>
+  <div class="main-container">
+
+    <header>
+      <NavigationBar />
+      <WeatherWidget class="weather-widget" />
+    </header>
+
+    <main class="main-box">
+      <div class="sub-container">
+
+      </div>
+      <router-view></router-view>
+    </main>
+  </div>
 </template>
 
 <style scoped>
-    .main-container 
-{
+.main-container {
   text-align: center;
   padding: 20px;
   margin-top: 0%;
   padding-top: 0%;
 }
 
-    .page-title 
-{
-  font-size: 3rem; 
-  color: #2c3e50;  
-  margin-bottom: 20px; 
+.page-title {
+  font-size: 3rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
   background-color: rgb(255, 255, 255);
   margin-bottom: 0%;
 }
-    .sub-container
-{
-  width:max-content;
+
+.sub-container {
+  width: max-content;
 }
 
 main {
@@ -53,8 +51,8 @@ main {
   color: white;
   padding: 20px;
   min-height: 300px;
-  width:auto;
-  height: 110vh;
+  width: auto;
+  height: 100%;
+  /*change to 100% allows matching contents on the page*/
 }
-
 </style>

@@ -13,23 +13,27 @@
       <div class="Intro col-md-6 order-2 text-center">
         <h1 class="display-4 mb-3">Welcome to HOPEBRIDGE</h1>
         <p class="lead">
-          At Hopebridge, we empower individuals who have been long-term unemployed to rediscover new opportunities, regain their mental strength, and rebuild their confidence.
+          At Hopebridge, we empower individuals who have been long-term unemployed to rediscover new opportunities,
+          regain their mental strength, and rebuild their confidence.
         </p>
         <p class="mb-4">
-          Through personalized resources and a supportive community, we provide practical solutions to help you navigate life’s challenges and create a brighter future.
+          Through personalized resources and a supportive community, we provide practical solutions to help you navigate
+          life’s challenges and create a brighter future.
         </p>
         <ul class="Resource text-center">
-          <li><strong>Career Development:</strong> Find the tools to rebuild your career path.</li>
+          <li><strong>Career Opportunities:</strong> Find the exclusive vacancy jobs to ease your stress.</li>
           <li><strong>Mental Health Support:</strong> Access resources to manage stress and anxiety.</li>
-          <li><strong>Community Engagement:</strong> Connect with others and share your journey.</li>
+          <li><strong>Stress Self-Evaluation:</strong> Take the test to know your self's stress level.</li>
         </ul>
         <h3 class="font-weight-bold mt-4">Are you ready to check your stress levels?</h3>
         <p class="mb-4">
-          Take our <strong>Stress Test</strong> to assess your current mental well-being and receive personalized tips on how to manage it. Start your journey toward a more balanced life.
+          Take our <strong>Stress Test</strong> to assess your current mental well-being and receive personalized tips
+          on how to manage it. Start your journey toward a more balanced life.
         </p>
         <router-link to="/Stresstest" class="btn btn-primary btn-lg mb-3">Take the Stress Test</router-link>
         <br />
-        <router-link to="/Mentalhealth" class="btn btn-outline-secondary btn-sm">Explore Mentalhealth Support</router-link>
+        <router-link to="/Mentalhealth" class="btn btn-outline-secondary btn-sm">Explore Mentalhealth
+          Support</router-link>
       </div>
     </div>
   </div>
@@ -39,8 +43,10 @@
 img {
   pointer-events: none;
 }
+
 .Home {
-  padding:0%; /* Reduced padding to bring content up */
+  padding: 0%;
+  /* Reduced padding to bring content up */
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: #ffffff;
 }
@@ -49,9 +55,14 @@ img {
   margin-top: 0%;
 }
 
+.Resource {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 h1 {
   font-size: 2.5rem;
-  margin-bottom: 10px; /* Reduced bottom margin for the heading */
+  margin-bottom: 10px;
+  /* Reduced bottom margin for the heading */
 }
 
 p.lead {
@@ -80,5 +91,8 @@ h3 {
 .btn-outline-secondary {
   font-size: 0.875rem;
   margin-top: 10px;
+  color:#ffffff;
+  border-width: 2px;
+  border-color:aliceblue
 }
 </style>

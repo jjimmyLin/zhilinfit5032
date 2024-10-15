@@ -1,6 +1,6 @@
 <template>
   <div class="weather-widget">
-    <div v-if="weatherData">
+    <div v-if="weatherData"> <!--initial validation-->
       <h4 class="location">
         {{ weatherData.name }}, {{ weatherData.sys.country }}
       </h4>
@@ -16,7 +16,6 @@
 
 <script>
 import axios from "axios";
-
 const apikey = "55eb0001d229b044078402b4a46e7968";
 
 export default {
@@ -38,6 +37,7 @@ export default {
         : null;
     },
   },
+  //mount to DOM
   mounted() {
     this.fetchCurrentLocationWeather();
   },
@@ -68,15 +68,16 @@ export default {
   position: absolute;
   top: 10px;
   right: 20px;
-  background-color: rgba(106, 101, 101, 0.8);
+  background-color: rgba(176, 168, 168, 0.8);
   padding: 10px;
   border-radius: 5px;
   text-align: center;
   width: 150px;
+  height: 80px;
 }
 
 .location {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
 }
 
@@ -85,13 +86,17 @@ export default {
   align-items: center;
   justify-content: space-between;
   margin-top: 10px;
+  font-size: small;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .temperature {
-  font-size: 14px;
+  font-size: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .description {
-  font-size: 12px;
+  font-size: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 </style>
