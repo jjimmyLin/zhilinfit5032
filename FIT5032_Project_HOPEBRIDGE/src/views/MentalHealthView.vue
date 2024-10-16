@@ -1,4 +1,3 @@
-<!--This mental health page will have more sections later but only successstory at this moment.-->
 
 <script setup>
 import SuccessStoryView from './SuccessStoryView.vue';

@@ -39,8 +39,7 @@
 <script>
 import { collection, addDoc } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
-import { db } from "@/firebase"; // Assuming firebase.js exports the Firestore instance
-
+import { db } from "@/firebase"; 
 export default {
     data() {
         return {
@@ -109,7 +108,7 @@ export default {
                 this.resultMessage = "Your stress is Very High. Need help? Check out our resources!";
             }
 
-            // Display result for guests and logged in users
+            // Display result for both guests and logged in users
             this.showResult = true;
 
             // If user is logged in, save result to Firestore
@@ -135,7 +134,6 @@ export default {
 </script>
 
 <style scoped>
-/* For better image responsiveness */
 .img-fluid {
     max-width: 100%;
     height: auto;
@@ -148,6 +146,6 @@ export default {
 }
 
 .content {
-    color: white;
+    color: rgb(242, 242, 242);
 }
 </style>

@@ -90,7 +90,7 @@ export default {
 
         sortTable(columnIndex) {
 
-            if (columnIndex !== 0) {
+            if (columnIndex !== 0 && columnIndex !== 4) {
                 return;
             } //limited sorting fucntion only to amount of subsidy
 
