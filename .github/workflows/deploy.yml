@@ -20,9 +20,11 @@ jobs:
 
     - name: Install dependencies
       run: npm ci
+      working-directory: FIT5032_Project_HOPEBRIDGE
 
     - name: Build
       run: npm run build
+      working-directory: FIT5032_Project_HOPEBRIDGE
 
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@4.1.4
