@@ -1,0 +1,201 @@
+ID,Country,State,Provider,Income_range,Subsidy_per_week
+1,Australia,New South Wales,gov,No Income,300
+2,Australia,New South Wales,gov,No Income,750
+3,Australia,New South Wales,gov,No Income,600
+4,Australia,New South Wales,ngo,No Income,100
+5,Australia,New South Wales,ngo,Low Income,400
+6,Australia,New South Wales,ngo,Low Income,260
+7,Australia,New South Wales,ngo,No Income,320
+8,Australia,New South Wales,gov,Low Income,610
+9,Australia,New South Wales,ngo,No Income,300
+10,Australia,New South Wales,ngo,Low Income,290
+11,Australia,New South Wales,ngo,No Income,600
+12,Australia,New South Wales,gov,Low Income,400
+13,Australia,New South Wales,ngo,Low Income,500
+14,Australia,New South Wales,gov,No Income,320
+15,Australia,Queensland,ngo,No Income,730
+16,Australia,New South Wales,gov,Low Income,200
+17,Australia,New South Wales,ngo,No Income,450
+18,Australia,South Australia,ngo,Low Income,140
+19,Australia,New South Wales,ngo,No Income,420
+20,Australia,New South Wales,gov,Low Income,180
+21,Australia,New South Wales,gov,Low Income,600
+22,Australia,New South Wales,gov,Low Income,200
+23,Australia,South Australia,gov,Low Income,620
+24,Australia,New South Wales,ngo,Low Income,600
+25,Australia,New South Wales,gov,No Income,100
+26,Australia,New South Wales,ngo,No Income,100
+27,Australia,New South Wales,gov,Low Income,440
+28,Australia,New South Wales,gov,Low Income,600
+29,Australia,New South Wales,ngo,No Income,110
+30,Australia,New South Wales,ngo,Low Income,200
+31,Australia,South Australia,gov,No Income,400
+32,Australia,New South Wales,ngo,No Income,200
+33,Australia,New South Wales,ngo,Low Income,300
+34,Australia,New South Wales,ngo,Low Income,900
+35,Australia,Victoria,gov,Low Income,600
+36,Australia,New South Wales,gov,Low Income,600
+37,Australia,New South Wales,ngo,No Income,470
+38,Australia,New South Wales,ngo,Low Income,300
+39,Australia,New South Wales,ngo,No Income,200
+40,Australia,New South Wales,gov,No Income,500
+41,Australia,New South Wales,gov,Low Income,100
+42,Australia,New South Wales,ngo,No Income,400
+43,Australia,New South Wales,gov,No Income,500
+44,Australia,New South Wales,gov,No Income,200
+45,Australia,Victoria,ngo,Low Income,880
+46,Australia,New South Wales,ngo,No Income,190
+47,Australia,South Australia,ngo,No Income,100
+48,Australia,New South Wales,gov,No Income,110
+49,Australia,New South Wales,gov,No Income,100
+50,Australia,New South Wales,ngo,No Income,410
+51,Australia,South Australia,ngo,No Income,870
+52,Australia,Western Australia,gov,No Income,170
+53,Australia,New South Wales,ngo,Low Income,300
+54,Australia,New South Wales,ngo,Low Income,570
+55,Australia,New South Wales,gov,No Income,470
+56,Australia,South Australia,ngo,Low Income,400
+57,Australia,New South Wales,gov,No Income,600
+58,Australia,New South Wales,ngo,No Income,400
+59,Australia,New South Wales,gov,No Income,200
+60,Australia,New South Wales,ngo,No Income,600
+61,Australia,New South Wales,ngo,No Income,400
+62,Australia,South Australia,gov,Low Income,680
+63,Australia,New South Wales,ngo,No Income,490
+64,Australia,New South Wales,ngo,No Income,270
+65,Australia,New South Wales,ngo,Low Income,400
+66,Australia,South Australia,ngo,No Income,600
+67,Australia,Western Australia,gov,No Income,200
+68,Australia,Western Australia,ngo,Low Income,500
+69,Australia,Western Australia,gov,No Income,730
+70,Australia,New South Wales,gov,No Income,200
+71,Australia,New South Wales,ngo,Low Income,760
+72,Australia,New South Wales,gov,No Income,650
+73,Australia,New South Wales,gov,No Income,100
+74,Australia,Victoria,gov,No Income,500
+75,Australia,New South Wales,gov,No Income,500
+76,Australia,New South Wales,ngo,No Income,400
+77,Australia,New South Wales,ngo,Low Income,890
+78,Australia,New South Wales,gov,No Income,410
+79,Australia,Western Australia,gov,No Income,200
+80,Australia,Victoria,ngo,No Income,100
+81,Australia,New South Wales,gov,No Income,710
+82,Australia,Victoria,ngo,No Income,390
+83,Australia,New South Wales,gov,Low Income,840
+84,Australia,South Australia,ngo,Low Income,200
+85,Australia,New South Wales,ngo,No Income,300
+86,Australia,New South Wales,ngo,Low Income,600
+87,Australia,New South Wales,ngo,No Income,220
+88,Australia,New South Wales,gov,No Income,100
+89,Australia,New South Wales,gov,No Income,710
+90,Australia,New South Wales,ngo,Low Income,100
+91,Australia,New South Wales,ngo,No Income,400
+92,Australia,South Australia,gov,Low Income,860
+93,Australia,New South Wales,gov,Low Income,600
+94,Australia,South Australia,ngo,No Income,300
+95,Australia,New South Wales,gov,No Income,330
+96,Australia,New South Wales,ngo,Low Income,840
+97,Australia,New South Wales,ngo,Low Income,600
+98,Australia,New South Wales,ngo,No Income,670
+99,Australia,New South Wales,ngo,Low Income,500
+100,Australia,Victoria,ngo,Low Income,120
+101,Australia,Western Australia,gov,No Income,580
+102,Australia,South Australia,ngo,Low Income,770
+103,Australia,New South Wales,ngo,Low Income,200
+104,Australia,New South Wales,ngo,Low Income,190
+105,Australia,South Australia,gov,Low Income,610
+106,Australia,New South Wales,ngo,No Income,600
+107,Australia,New South Wales,ngo,Low Income,500
+108,Australia,Western Australia,gov,Low Income,100
+109,Australia,New South Wales,ngo,No Income,200
+110,Australia,Western Australia,ngo,Low Income,500
+111,Australia,New South Wales,ngo,No Income,400
+112,Australia,New South Wales,ngo,Low Income,400
+113,Australia,New South Wales,ngo,Low Income,500
+114,Australia,New South Wales,gov,No Income,680
+115,Australia,New South Wales,gov,Low Income,500
+116,Australia,South Australia,gov,Low Income,650
+117,Australia,Western Australia,ngo,No Income,400
+118,Australia,New South Wales,ngo,Low Income,440
+119,Australia,New South Wales,ngo,Low Income,250
+120,Australia,New South Wales,ngo,No Income,200
+121,Australia,South Australia,gov,Low Income,400
+122,Australia,South Australia,ngo,No Income,600
+123,Australia,Victoria,gov,Low Income,200
+124,Australia,South Australia,ngo,Low Income,300
+125,Australia,New South Wales,gov,Low Income,100
+126,Australia,New South Wales,gov,No Income,100
+127,Australia,South Australia,ngo,Low Income,500
+128,Australia,New South Wales,ngo,No Income,200
+129,Australia,New South Wales,gov,No Income,550
+130,Australia,New South Wales,ngo,No Income,330
+131,Australia,South Australia,ngo,Low Income,260
+132,Australia,New South Wales,ngo,No Income,400
+133,Australia,New South Wales,ngo,No Income,200
+134,Australia,New South Wales,ngo,Low Income,720
+135,Australia,New South Wales,ngo,No Income,290
+136,Australia,Western Australia,gov,Low Income,780
+137,Australia,New South Wales,gov,No Income,500
+138,Australia,New South Wales,ngo,Low Income,160
+139,Australia,New South Wales,gov,No Income,530
+140,Australia,New South Wales,ngo,Low Income,100
+141,Australia,Queensland,ngo,No Income,200
+142,Australia,New South Wales,gov,No Income,500
+143,Australia,Western Australia,ngo,No Income,180
+144,Australia,South Australia,gov,No Income,400
+145,Australia,New South Wales,ngo,No Income,300
+146,Australia,New South Wales,gov,No Income,400
+147,Australia,Victoria,ngo,No Income,410
+148,Australia,New South Wales,ngo,Low Income,190
+149,Australia,New South Wales,ngo,No Income,430
+150,Australia,New South Wales,gov,No Income,400
+151,Australia,South Australia,ngo,Low Income,500
+152,Australia,New South Wales,ngo,Low Income,600
+153,Australia,Queensland,ngo,No Income,340
+154,Australia,New South Wales,gov,Low Income,300
+155,Australia,New South Wales,ngo,No Income,470
+156,Australia,New South Wales,ngo,Low Income,170
+157,Australia,New South Wales,gov,No Income,500
+158,Australia,New South Wales,ngo,Low Income,600
+159,Australia,New South Wales,ngo,Low Income,650
+160,Australia,New South Wales,gov,Low Income,240
+161,Australia,New South Wales,ngo,No Income,720
+162,Australia,New South Wales,ngo,Low Income,500
+163,Australia,New South Wales,gov,No Income,620
+164,Australia,New South Wales,gov,No Income,100
+165,Australia,New South Wales,ngo,Low Income,400
+166,Australia,New South Wales,ngo,Low Income,170
+167,Australia,New South Wales,ngo,No Income,100
+168,Australia,Western Australia,ngo,Low Income,400
+169,Australia,New South Wales,ngo,Low Income,200
+170,Australia,New South Wales,ngo,No Income,680
+171,Australia,New South Wales,ngo,No Income,400
+172,Australia,New South Wales,ngo,Low Income,200
+173,Australia,South Australia,ngo,Low Income,500
+174,Australia,New South Wales,gov,Low Income,450
+175,Australia,New South Wales,gov,No Income,200
+176,Australia,New South Wales,gov,No Income,400
+177,Australia,New South Wales,ngo,No Income,500
+178,Australia,New South Wales,gov,No Income,240
+179,Australia,New South Wales,gov,Low Income,500
+180,Australia,New South Wales,gov,Low Income,650
+181,Australia,New South Wales,ngo,Low Income,610
+182,Australia,New South Wales,ngo,No Income,420
+183,Australia,New South Wales,gov,Low Income,400
+184,Australia,Victoria,gov,Low Income,110
+185,Australia,Queensland,gov,Low Income,600
+186,Australia,Victoria,ngo,Low Income,630
+187,Australia,South Australia,ngo,No Income,500
+188,Australia,New South Wales,ngo,No Income,400
+189,Australia,Western Australia,ngo,No Income,140
+190,Australia,New South Wales,ngo,No Income,600
+191,Australia,Western Australia,gov,Low Income,730
+192,Australia,New South Wales,ngo,Low Income,720
+193,Australia,Western Australia,gov,No Income,400
+194,Australia,New South Wales,gov,No Income,400
+195,Australia,New South Wales,ngo,Low Income,100
+196,Australia,Victoria,gov,Low Income,100
+197,Australia,New South Wales,gov,Low Income,300
+198,Australia,New South Wales,gov,Low Income,200
+199,Australia,New South Wales,gov,Low Income,100
+200,Australia,New South Wales,ngo,No Income,300
