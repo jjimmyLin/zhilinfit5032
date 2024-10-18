@@ -28,6 +28,9 @@ is monitored inorder to decide whether display log out button or not-->
         <div v-else-if="userRole === 'loggedout'">
             <h1>Please Log in😁</h1>
             <router-link to="/Login" class="btn btn-primary btn-sm">Log in</router-link>
+            <br>
+            <br>
+            <router-link to="/Register" class="btn btn-primary btn-sm">Register</router-link>
         </div>
     </div>
 </template>
